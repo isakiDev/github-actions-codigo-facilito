@@ -9,3 +9,6 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola Mundo"
+
+      - name: Setup
+        run: echo "Hola Setup"`
