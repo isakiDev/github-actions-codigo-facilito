@@ -1,14 +1,20 @@
 name: Deploy to server
+
 on:
   - push
 
 jobs:
-  deploy:
+  set-up:
     runs-on: ubuntu-latest
 
     steps:
       - name: Hola Mundo
         run: echo "Hola Mundo"
 
-      - name: Setup
-        run: echo "Hola Setup"`
+  deploy:
+    needs: set-up
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hola Setup
+        run: echo "Setup"
