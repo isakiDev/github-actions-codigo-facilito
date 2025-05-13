@@ -19,4 +19,4 @@ jobs:
           ssh-private-key: ${{secrets.SSH_KEY}}
 
       - name: create file
-        uses: bash deploy.sh
+        run: bash deploy.sh
