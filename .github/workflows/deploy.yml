@@ -10,13 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
       - name: setup
-        run: echo "setup"
-
-  deploy:
-    needs: set-up
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Hola Mundo
-        run: echo ${{secrets.NAME}}
+        run: ls -al
