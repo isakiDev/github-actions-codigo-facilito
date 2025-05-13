@@ -10,14 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hola Mundo
-        run: echo "Hola Mundo"
+      - name: setup
+        run: echo "setup"
 
   deploy:
-    if: false
     needs: set-up
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hola Setup
-        run: echo "Setup"
+      - name: Hola Mundo
+        run: echo ${{secrets.NAME}}
